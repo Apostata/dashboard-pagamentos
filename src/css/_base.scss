@@ -1,0 +1,13 @@
+$material-icons-font-path: '~material-icons/iconfont/';
+@import '~material-icons/iconfont/material-icons.scss';
+@import 'bpag-font';
+
+//config
+@import 'config/reset';
+@import 'config/colors';
+
+//components
+@import 'components/main';
+@import 'components/header';
+@import 'components/sidebar';
+@import 'components/footer';

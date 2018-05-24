@@ -21,7 +21,7 @@ if(process.env.NODE_ENV !== "production"){
     webpackDevMiddleware.invalidate();
     server.use(webpackDevMiddleware); //usar as configurações de devserver do webpack config
     server.use(webpackHotMiddleware); //usar live reload USAR SEMPRE DEPOIS DO DEV MIDDLEWARE
-    const PORT = process.env.PORT || 8989;
+    const PORT = process.env.PORT || 8181;
     server.use('/', express.static(__dirname + '/dist'));
 
     server.get('/:page', function(req, res) {

@@ -5,13 +5,24 @@ const HTMLWebpackPlugin =  require('html-webpack-plugin');
 const glob = require('glob');
 const entries = glob.sync('./src/pages/*.js');
 const entry = {};
+let htmlEntries = [];
 
 entry['materialize'] = './src/css/sass/materialize.scss';
 
 for (const singleEntry of entries){
     const chunkName = singleEntry.match(/.*pages\/+(.*)+.*.js/)[1];
     entry[chunkName] = singleEntry;
-}
+
+    var teste = new HTMLWebpackPlugin({
+        chunks: [chunkName],
+        template: `src/hbs/${chunkName}.hbs`,
+        filename: `${chunkName}.html`,
+    })
+    
+        htmlEntries.push(
+            teste
+        );
+};
 
 const webpackConfig = {
     name: "client",
@@ -22,14 +33,15 @@ const webpackConfig = {
     output:{
         filename: "[name]-bundle.js",
         chunkFilename: "[name].js",
-        path: path.resolve(__dirname, "dist/"),
+        path: path.resolve(__dirname, "./dist"),
         publicPath: "/"
     },
 
     devServer: {
         contentBase: path.resolve('static'),
-        publicPath: '/',
+        publicPath: '/dist/',
         overlay: true,
+        hot: true, //live reoald
         stats:{
             colors: true
         }
@@ -101,8 +113,8 @@ const webpackConfig = {
                 ]
             },
 
-           {
-                test: /\.html$/,
+           /*{
+                test: /\.(html)$/,
                 use: [
                   {
                     loader: "file-loader",
@@ -114,9 +126,24 @@ const webpackConfig = {
                   {
                     loader: "html-loader",
                     options: {
-                      attrs: ["img:src"]
+                        interpolate:true,
+                        attrs: ["img:src"]
                     }
+                      
                   }
+                ]
+            }*/
+            {// loader para o pré processador html handlebars
+                test:/\.hbs$/,
+                use:[
+                    { 
+                        loader: "handlebars-loader",
+                        options: {
+                            partialDirs: [
+                                path.resolve(__dirname, "../src/hbs/partials"),
+                            ]
+                        },
+                    }
                 ]
             }
         ]
@@ -131,11 +158,7 @@ const webpackConfig = {
             }
         }),
         new webpack.HotModuleReplacementPlugin(),
-        /*new HTMLWebpackPlugin({
-            template:   'src/index.html',
-            inject: true,
-        })*/
-    ]
+    ].concat(htmlEntries)
 };
 
 module.exports = webpackConfig;

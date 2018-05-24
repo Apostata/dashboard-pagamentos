@@ -1,0 +1,17 @@
+
+@import 'base';
+
+
+.content-wrapper{
+    order: 2;
+    display: flex;
+    flex-flow: row wrap;
+
+    & > *{
+        flex: 1 100%;
+    }
+
+    .main-content{
+        order: 2;
+    }
+}
