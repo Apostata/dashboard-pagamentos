@@ -1,4 +1,44 @@
 .header-wrapper{
     min-height: 1px;
     background: map-get($cores, 'azul-claro');
+
+    .header-left{
+        .menu-btn{
+            color: white;
+            padding: 12px 0;
+            display: block;
+        }
+    }
+
+    i{
+        font-size: 35px;
+    }
+
+    .header-center{
+        .logo-wrapper{
+            .logo{
+                color: white;
+                font-size: 25px;
+                i{
+                    display: inline-block;
+                    margin-right: 10px;
+
+                    &:before{
+                        font-family: "bpag";
+                        content: "\e901";
+                        display: block;
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-right{
+        .account-btn{
+            color: white;
+            padding: 12px 0;
+            display: block;
+        }
+    }
 }

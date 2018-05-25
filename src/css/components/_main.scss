@@ -1,25 +1,12 @@
 .main-div{
-    display: flex;
-    flex-flow: row wrap;
 
-    & > *{
-        flex: 1 110%;
-    }
 }
 
 .content-wrapper{
-    order: 2;
-    display: flex;
-    flex-flow: row wrap;
-
-    & > *{
-        flex: 1 100%;
-    }
-
+    
     @import 'components/sidebar';
-
     .main-content{
-        flex: 5 5 0px;
-        order: 2;
+        padding-left: 60px;
+        box-sizing: border-box;
     }
 }

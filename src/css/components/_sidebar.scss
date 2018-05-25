@@ -1,4 +1,20 @@
 .sidebar{
-    flex: 1 1 auto;
-    order: 1;
+    position: static;
+
+    #sidebar{
+        z-index: 996;
+        transform: translateX(0%)!important;
+        position: absolute!important;
+        top: 62px;
+        height: calc(100% - 62px)!important;
+        transition: transform 300ms ease-in-out;
+    }
+}
+
+.sideLeftClosed{
+    .sidebar{
+        #sidebar{
+            transform: translateX(-240px)!important;
+        }
+    }
 }

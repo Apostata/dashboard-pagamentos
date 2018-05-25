@@ -11,17 +11,22 @@ entry['materialize'] = './src/css/sass/materialize.scss';
 
 for (const singleEntry of entries){
     const chunkName = singleEntry.match(/.*pages\/+(.*)+.*.js/)[1];
-    entry[chunkName] = singleEntry;
+    if(chunkName !== "pages"){
+        entry[chunkName] = [];
+        entry[chunkName].push('babel-runtime/regenerator');
+        entry[chunkName].push('webpack-hot-middleware/client?reload=true');
+        entry[chunkName].push(singleEntry);
 
-    var teste = new HTMLWebpackPlugin({
-        chunks: [chunkName],
-        template: `src/hbs/${chunkName}.hbs`,
-        filename: `${chunkName}.html`,
-    })
-    
+        var teste = new HTMLWebpackPlugin({
+            chunks: [chunkName],
+            template: `src/hbs/${chunkName}.hbs`,
+            filename: `${chunkName}.html`,
+        })
+        
         htmlEntries.push(
             teste
         );
+    }
 };
 
 const webpackConfig = {
