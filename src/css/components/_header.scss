@@ -1,6 +1,26 @@
 .header-wrapper{
     min-height: 1px;
-    background: map-get($cores, 'azul-claro');
+    width: 100%;
+    position: relative;
+    min-height: 63px;
+    margin-bottom: 25px;
+
+    .header-content{
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding-left: 300px;
+        background: map-get($cores, 'azul-claro');
+        width: 100%;
+        min-height: 63px;
+        z-index: 1;
+        transition: padding 300ms ease-in-out;
+
+        & > .row{
+            margin-bottom: 0;
+        }
+    }
+
 
     .header-left{
         .menu-btn{
@@ -39,6 +59,15 @@
             color: white;
             padding: 12px 0;
             display: block;
+        }
+    }
+}
+
+
+.sideLeftClosed{
+    .header-wrapper{
+        .header-content{
+            padding-left: 62px;
         }
     }
 }

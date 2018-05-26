@@ -1,5 +1,9 @@
 .footer-wrapper{
     min-height: 1px;
     background: map-get($cores, 'cinza-escuro');
-    order: 3;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 60px;
 }

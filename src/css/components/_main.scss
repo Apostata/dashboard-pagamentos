@@ -1,12 +1,42 @@
-.main-div{
-
+body{
+    font-family: 'Roboto', sans-serif;
+    min-height: 100%;
+    width: 100%;
 }
 
-.content-wrapper{
-    
-    @import 'components/sidebar';
-    .main-content{
-        padding-left: 60px;
-        box-sizing: border-box;
+#main-div{
+    position: static;
+    display: block;
+    min-height: 100%;
+    padding-left: 300px;
+    transition: padding 300ms ease-in-out;
+    box-sizing: border-box;
+    width: 100%;
+
+    &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 63px;
+        background: map-get($cores, 'azul-claro');
+        z-index: -1;
+    }
+
+    @media screen and ($mobile){
+        padding-left: 0;
     }
 }
+
+.sideLeftClosed{
+    #main-div{
+        padding-left: 62px;
+     
+        @media screen and ($mobile){
+            padding-left: 0;
+        }
+    }
+}
+
+@import 'components/sidebar';

@@ -1,20 +1,51 @@
-.sidebar{
-    position: static;
 
-    #sidebar{
-        z-index: 996;
-        transform: translateX(0%)!important;
-        position: absolute!important;
-        top: 62px;
-        height: calc(100% - 62px)!important;
-        transition: transform 300ms ease-in-out;
+#sidebar{
+    z-index: 996;
+    transform: translateX(0%)!important;
+    position: fixed!important;
+    height: calc(100%)!important;
+    transition: transform 300ms ease-in-out;
+    border: none;
+    box-shadow: none;
+    background: map-get($cores, 'azul-escuro');
+
+    .sideButtom{
+        position: relative;
+        background: map-get($cores, 'azul-claro');
+        width: 100%;
+        min-height: 63px;
+        a{
+            position: absolute;
+            right: 237px;
+            top: 0;
+            padding: 0;                      
+            min-height: 63px;
+            width: 63px;
+            text-align: right;
+            transition: right 300ms ease-in-out;
+        }
+
+        & + li{
+        }
+    }
+
+    @media screen and ($mobile){
+        transform: translateX(-100%)!important;
     }
 }
 
 .sideLeftClosed{
-    .sidebar{
-        #sidebar{
-            transform: translateX(-240px)!important;
+    #sidebar{
+        transform: translateX(-238px)!important;
+
+        @media screen and ($mobile){
+            transform: translateX(-100%)!important;
+        }
+
+        .sideButtom{
+            a{
+                right: 0;
+            }
         }
     }
 }

@@ -24,8 +24,18 @@ if(process.env.NODE_ENV !== "production"){
     const PORT = process.env.PORT || 8181;
     server.use('/', express.static(__dirname + '/dist'));
 
+
+    
+
     server.get('/:page', function(req, res) {
         const htmlBuffer = webpackDevMiddleware.fileSystem.readFileSync(`${configDevClient.output.path}/${req.params.page}.html`)
+
+        res.send(htmlBuffer.toString())
+        //res.sendFile(path.join(__dirname, '../../dist', path.basename(req.params.page) + '.html'));
+    });
+
+    server.get('/', function(req, res) {
+        const htmlBuffer = webpackDevMiddleware.fileSystem.readFileSync(`${configDevClient.output.path}/home.html`)
 
         res.send(htmlBuffer.toString())
         //res.sendFile(path.join(__dirname, '../../dist', path.basename(req.params.page) + '.html'));

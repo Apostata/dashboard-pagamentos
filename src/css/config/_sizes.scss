@@ -1,6 +1,4 @@
-$media-sizes: (
-    'mobile'    : 'screen and (max-width: 600px)',
-    'tablet'    : 'screen and (max-width: 992px)',
-    'desktop'   : 'screen and (max-width: 1200px)',
-    'hd'        : 'screen and (min-width: 1201px)' 
-);
+$mobile : 'max-width: 600px';
+$tablet : 'max-width: 992px';
+$dektop : 'max-width: 1200px';
+$hd     : 'min-width: 1201px';
