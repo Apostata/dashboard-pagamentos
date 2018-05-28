@@ -3,7 +3,7 @@
     width: 100%;
     position: relative;
     min-height: 63px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 
     .header-content{
         position: fixed;
@@ -16,7 +16,7 @@
         z-index: 1;
         transition: padding 300ms ease-in-out;
 
-        & > .row{
+       .row{
             margin-bottom: 0;
         }
     }
@@ -39,16 +39,30 @@
             .logo{
                 color: white;
                 font-size: 25px;
+                font-family: 'folio_bold';
                 i{
                     display: inline-block;
                     margin-right: 10px;
+                    font-style: normal;
 
                     &:before{
                         font-family: "bpag";
-                        content: "\e901";
+                        content: "\e900";
                         display: block;
                         font-size: 40px;
                     }
+                }
+            }
+        }
+
+        .uoldiveo-wrapper{
+            .logo-uoldiveo{
+                text-align: center;
+                color: white;
+                line-height: 63px;
+
+                & > i{
+                    font-size: 25px;
                 }
             }
         }

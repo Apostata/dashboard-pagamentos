@@ -39,4 +39,16 @@ body{
     }
 }
 
+.container{
+    width: 100%;
+    max-width: 1920px;
+    box-sizing: border-box;
+    padding: 0px 30px;
+}
+
+.main-content{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
 @import 'components/sidebar';

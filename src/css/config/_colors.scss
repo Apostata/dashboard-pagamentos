@@ -10,3 +10,59 @@ $cores: (
     'cinza-medio':      #626262,
     'cinza-escuro':     #2b343b
 );
+
+
+$coresMenus :(
+
+    'search'    :map-get($cores, 'azul-claro'),
+    'admin'     :map-get($cores, 'verde-escuro'),
+    'report'    :map-get($cores, 'verde-claro'),
+    'config'    :map-get($cores, 'laranja-claro'),
+    'concil'     :map-get($cores, 'laranja-escuro'),
+
+);
+
+@each $indiceCor, $valorCor in $coresMenus {
+
+    .waves-effect.waves-#{$indiceCor} .waves-ripple {
+    /* The alpha value allows the text and background color
+    of the button to still show through. */
+        background-color: rgba($valorCor, 1);
+    }
+
+    #sidebar{
+        li{
+            &.#{$indiceCor}{
+                a{
+                    position: relative;
+                    padding: 0 15px;
+
+                    &:before{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        content: "";
+                        width: 5px;
+                        height: 100%;
+                        background: $valorCor;
+                        transition: 300ms left ease-in-out 300ms;
+                    }
+                }
+            }
+        }
+    }
+
+    .sideLeftClosed{
+        #sidebar{
+            li{
+                &.#{$indiceCor}{
+                    a{
+                        &:before{
+                           left:238px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
