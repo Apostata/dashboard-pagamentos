@@ -6,6 +6,7 @@ export default class Pages{
     initilize(){
         this.setClickLeftSidebar();
         this.setSidebars();
+        this.setSelects();
     }
 
     setClickLeftSidebar(){
@@ -27,5 +28,10 @@ export default class Pages{
             closeOnClick: true,
             edge: 'right', // <--- CHECK THIS OUT
         }); //inicia sidebar
+    }
+
+    setSelects(){
+       var selects =  $('select');
+       M.FormSelect.init(selects);
     }
 }

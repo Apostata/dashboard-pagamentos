@@ -1,2 +1,8 @@
 
 @import 'base';
+@import 'modified-material/forms';
+
+.view-report{
+    background: map-get($cores, 'cinza-claro');
+    margin: 0;
+}

@@ -1,11 +1,13 @@
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'folio_bk_btbook', sans-serif;
     min-height: 100%;
     width: 100%;
 }
 
 #main-div{
-    position: static;
+    position: absolute;
+    left: 0;
+    top: 0;
     display: block;
     min-height: 100%;
     padding-left: 300px;
@@ -43,12 +45,25 @@ body{
     width: 100%;
     max-width: 1920px;
     box-sizing: border-box;
-    padding: 0px 30px;
-}
-
-.main-content{
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 0px;
 }
 
 @import 'components/sidebar';
+
+.main-content{
+    & > *{
+        padding: 15px 0;
+    }
+
+    &.mock-img{
+        background: url('/images/imagem-corpo-4747eaee.jpg') no-repeat 0 0;
+        min-height: 1070px;
+        background-size: 100%;
+        width: 100%;
+        position: relative;
+        left: 0;
+        margin-left: 0;
+        top: -10px;
+        box-sizing: border-box;
+    }
+}

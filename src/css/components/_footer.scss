@@ -6,4 +6,39 @@
     left: 0;
     width: 100%;
     min-height: 60px;
+    padding-left: 300px;
+    transition: padding 300ms ease-in-out;
+
+    .row{
+        margin-bottom: 0;
+    }
+
+    .uoldiveo-wrapper{
+        color: white;
+        
+        .logo-uoldiveo{
+            line-height: 63px;
+            text-align: right;
+
+            &>i {
+                font-size: 25px;
+            }
+        }
+    }
+
+    .copyright-wrapper{
+        p{
+            text-align: right;
+            padding-right: 15px;
+            color: white;
+            font-size: 12px;
+            line-height: 39px;
+        }
+    }
+}
+
+.sideLeftClosed{
+    .footer-wrapper{
+        padding-left: 62px;
+    }
 }

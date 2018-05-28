@@ -1,0 +1,14 @@
+.input-field{
+    margin-top: 2rem;
+}
+
+.input-field{
+    label, label span, label i{
+        color: map-get($cores, 'azul-escuro');
+
+        i + span, span + i{
+            position: relative;
+            top: -5px;        
+        }
+    }
+}
