@@ -1,0 +1,10 @@
+.home{
+    .home-cards, .transaction, .view-totals, .view-graphics{
+        .card{
+            box-shadow: none;
+            .card-content{
+                padding: 10px 24px;
+            }
+        }
+    }
+}

@@ -51,8 +51,14 @@ body{
 @import 'components/sidebar';
 
 .main-content{
-    & > *{
-        padding: 15px 0;
+    & > .wrapper{
+        & > *{
+            padding: 15px 0;
+
+            & > .row{
+                margin-bottom: 0;
+            }
+        }
     }
 
     &.mock-img{
@@ -65,5 +71,23 @@ body{
         margin-left: 0;
         top: -10px;
         box-sizing: border-box;
+    }
+}
+
+.centered{
+    text-align: center;
+}
+
+.empty{
+    position: relative;
+
+    &:before{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 100%;
+        background: map-get($cores, 'cinza-medio');
     }
 }

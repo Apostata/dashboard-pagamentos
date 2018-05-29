@@ -3,12 +3,35 @@
 }
 
 .input-field{
+    label{
+        font-family: 'folio_bold', sans-serif;
+        font-size: 15px;
+    }
     label, label span, label i{
+
         color: map-get($cores, 'azul-escuro');
 
         i + span, span + i{
             position: relative;
             top: -5px;        
+        }
+    }
+
+    .select-wrapper{
+        input{
+            &.select-dropdown{
+                height: 4rem;
+                font-family: 'folio_bk_btbook', sans-serif;
+                font-size: 15px;
+                color: map-get($cores, 'cinza-medio');
+            }
+        }
+
+        .select-dropdown{
+            li{
+                font-family: 'folio_bk_btbook', sans-serif;
+                font-size: 15px;
+            }
         }
     }
 }

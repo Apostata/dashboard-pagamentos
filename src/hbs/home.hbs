@@ -2,14 +2,15 @@
 <html>
     <head>
         <link rel="stylesheet" href="materialize.css">
+        <link rel="stylesheet" href="highcharts.css">
     </head>
-    <body class="sideLeftClosed">
+    <body class="home sideLeftClosed">
         <div id="main-div">
             {{> header }}               
             {{> sidebar }}
             {{> account-sidebar }}
             <section class="container main-content">
-                {{> home-content }}
+                {{> home/home-content }}
             </section>
             {{> footer }}
         </div>

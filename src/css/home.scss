@@ -1,8 +1,208 @@
 
 @import 'base';
 @import 'modified-material/forms';
+@import 'modified-material/cards';
 
+
+.view-report, .view-totals, .view-graphics{
+    h3{
+        text-align: center;
+        font-family: 'folio_bold', sans-serif;
+        font-size: 15px;
+        color: map-get($cores, 'azul-escuro');
+        display: block;
+        
+        span{
+            position: relative;
+            box-sizing: border-box;
+            display: inline-block;
+
+            &:before, &:after{
+                font-family: Material Icons;
+                font-size: 20px;
+                position: absolute;
+                top: 0px;
+                left: auto;
+                margin-right: 5px;
+                margin-left: -28px;
+            }
+        }
+
+        i{
+            position: relative;
+            top: 3px;
+            margin-right: 5px;
+        }
+    }
+}
 .view-report{
     background: map-get($cores, 'cinza-claro');
     margin: 0;
+    .home-cards{
+    
+        .last24Hours{
+            h3{
+                span{
+                    &:before{
+                        content: "restore";
+                    }
+                }
+            }
+        }
+    
+        .lastWeek{
+            h3{
+                span{
+                    &:before{
+                        content: "event";
+                    }
+                }
+            }
+        }
+    
+        .lastMonth{
+            h3{
+                span{
+                    &:before{
+                        content: "date_range";
+                    }
+                }
+            }
+        }
+        
+        .card{
+            .card-title{
+                display: block;
+                text-align: center;
+                font-family: 'folio_bold', sans-serif;
+                font-size: 14px;
+                color: darken(map-get($cores, 'cinza-claro'), 25%);
+                border-bottom: 1px solid darken(map-get($cores, 'cinza-claro'), 25%);
+            }
+
+            .card-body{
+                p{
+                    font-family: 'folio_bold', sans-serif;
+                    font-size: 30px;
+                    padding: 10px 0;
+
+                    &:before{
+                        font-size: 20px;
+                        display: inline-block;
+                        margin-right: 5px;
+                        position: relative;
+                        top: 3px;
+                    }
+                }
+            }
+        }
+    
+        [class*=offset-m2]{
+            position: relative;
+    
+            &:before{
+                display: block;
+                content: "";
+                position: absolute;
+                left: -33.333337%;
+                top: 0;
+                width: 2px;
+                height: 100%;
+                background: darken(map-get($cores, 'cinza-claro'), 25%);
+    
+                @media screen and ($mobile){
+                    display: none;
+                }
+            }
+        }
+        
+    }
+}
+.view-transactions, .view-totals, .view-graphics{
+    .card{
+        background: map-get($cores, 'cinza-claro');
+        font-family: 'folio_bold', sans-serif;
+    }
+}
+.view-transactions{
+    .card{
+        .card-header{
+            text-align: center;
+
+            h3{
+                font-size: 18px;
+                
+                &:before{
+                    display: block;
+                    font-size: 22px;
+                }
+            }
+        }
+
+        .card-body{
+            text-align: center;
+            font-size: 25px;
+        }
+    }
+}
+
+.view-totals{
+    
+    h3{
+        text-align: left;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .sub-card{
+        padding: 15px;
+        box-sizing: border-box;
+
+        .subcard-icon{
+            .material-icons{
+                color: map-get($cores, 'cinza-claro');
+                font-size: 32px;
+                padding: 9px 9px;
+                border-radius: 30px;
+                background: map-get($cores, 'cinza-medio');
+            }
+        }
+
+        .subcard-content{
+            color: map-get($cores, 'cinza-medio');
+            padding: 0;
+
+            .subcard-header{
+
+            }
+
+            .subcard-body{
+                font-size: 25px;
+            }
+        }
+    }
+       
+    .pay-methods{
+        h3{
+            
+            i{
+                
+                transform: rotate(90deg);
+            }
+        }
+
+        .sub-card{
+            text-align: center;
+
+            .subcard-header{
+
+            }
+        }
+    }
+}
+
+.view-graphics{
+    h3{
+        text-align: left;
+    }
 }

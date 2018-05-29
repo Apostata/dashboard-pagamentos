@@ -22,6 +22,39 @@ $coresMenus :(
 
 );
 
+$coresStatus :(
+    'default'      :map-get($cores, 'azul-claro'),
+    'deactive'     :map-get($cores, 'cinza-medio'),
+    'success'      :map-get($cores, 'verde-claro'),
+    'alert'        :map-get($cores, 'laranja-claro'),
+    'error'        :map-get($cores, 'laranja-escuro')
+);
+
+$iconStatus :(
+    'default'      :'language',
+    'deactive'     :'format_align_justify',
+    'success'      :'done',
+    'alert'        :'refresh',
+    'error'        :'highlight_off'
+);
+
+$trendingColor : (
+    'positive'          :map-get($cores, 'verde-claro'),
+    'negative'          :map-get($cores, 'laranja-escuro')
+);
+
+$trendingIcon : (
+    'positive'          :'trending_up',
+    'negative'          :'trending_down'
+);
+
+$iconPayments :(
+    'credit'      :'credit_card',
+    'debit'       :'attach_money',
+    'ticket'      :'description',
+    'gift'        :'card_giftcard',
+);
+
 @each $indiceCor, $valorCor in $coresMenus {
 
     .waves-effect.waves-#{$indiceCor} .waves-ripple {
@@ -64,6 +97,66 @@ $coresMenus :(
                         &:before{
                            left:238px;
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@each $indiceTrending, $valorTrending in $trendingColor {
+    .#{$indiceTrending}{
+        color: $valorTrending;
+    }
+
+    .card-content{
+        p{
+            &.#{$indiceTrending}{
+                color: $valorTrending;
+                
+                &:before{
+                    content: map-get($trendingIcon, $indiceTrending);
+                    font-family: Material Icons;
+                }
+            }
+        }
+    }
+}
+
+@each $indiceStatus, $valorStatus in $coresStatus{
+    .transaction{
+        &.#{$indiceStatus}{
+            .card-header{
+                h3{
+                    color: $valorStatus;
+                    &:before{
+                        content: map-get($iconStatus, $indiceStatus);
+                        font-family: Material Icons;
+
+                        @if $indiceStatus == 'deactive'{
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+            }
+
+            .card-body{
+                color: $valorStatus;
+            }
+        }
+    }
+}
+
+@each $indicePayment, $valorPayment in $iconPayments {
+    .pay-methods{
+        .sub-card{
+            &.#{$indicePayment}{
+                .subcard-header{
+                    &:before{
+                        display: block;
+                        font-size: 25px;
+                        content: $valorPayment;
+                        font-family: Material Icons;
                     }
                 }
             }
