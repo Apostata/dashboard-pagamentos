@@ -147,7 +147,10 @@
 }
 
 .view-totals{
-    
+    @media screen and ($mobile){
+        text-align: center;    
+    }
+
     h3{
         text-align: left;
         padding: 0 15px;

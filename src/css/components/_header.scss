@@ -15,6 +15,10 @@
         z-index: 99999;
         transition: padding 300ms ease-in-out;
 
+        @media screen and ($mobile){
+            padding-left: 62px;
+        }
+
        .row{
             margin-bottom: 0;
         }

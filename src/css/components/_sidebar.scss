@@ -9,6 +9,10 @@
     box-shadow: none;
     background: map-get($cores, 'azul-escuro');
 
+    @media screen and ($mobile){
+        overflow-y: visible;
+    }
+
     li{
         a{
             font-family: 'folio_bold', sans-serif;
@@ -81,10 +85,10 @@
 
         & + li{
         }
-    }
 
-    @media screen and ($mobile){
-        transform: translateX(-100%)!important;
+        @media screen and ($mobile){
+            right: 0px;
+        }
     }
 }
 
@@ -111,6 +115,10 @@
         }
 
         .sideButtom{
+            @media screen and ($mobile){
+                right: -62px;
+            }
+            
             a{
                 right: 0;
 
@@ -139,4 +147,8 @@
             }
         }
     }
+}
+
+#account-sidebar{
+    z-index: 999999;
 }

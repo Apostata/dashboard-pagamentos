@@ -20,6 +20,10 @@
             line-height: 63px;
             text-align: right;
 
+            @media screen and ($mobile){
+                text-align: center;
+            }
+
             &>i {
                 font-size: 25px;
             }
@@ -35,10 +39,18 @@
             line-height: 39px;
         }
     }
+
+    @media screen and ($mobile){
+        padding-left: 0px;
+    }
 }
 
 .sideLeftClosed{
     .footer-wrapper{
         padding-left: 62px;
+
+        @media screen and ($mobile){
+            padding-left: 0px;
+        }
     }
 }
