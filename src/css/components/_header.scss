@@ -12,7 +12,7 @@
         background: map-get($cores, 'azul-claro');
         width: 100%;
         min-height: 63px;
-        z-index: 99999;
+        z-index: 999996;
         transition: padding 300ms ease-in-out;
 
         @media screen and ($mobile){

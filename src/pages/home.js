@@ -3,6 +3,7 @@ import Pages from './pages';
 import '../css/home.scss';
 import '../css/highcharts/highcharts.scss';
 import '../hbs/home.hbs';
+
 import materialize from 'materialize-css';
 import jQuery from "jquery";
 window.$ = window.jQuery = jQuery;

@@ -92,18 +92,6 @@ const webpackConfig = {
                 })
             },
 
-            { //loader para as imagens
-                test: /\.(jpg|gif|png)$/,
-                use:[
-                    {
-                        loader: "file-loader",
-                        options:{
-                            name:"images/[name]-[hash:8].[ext]"
-                        }
-                    }
-                ]
-
-            },
 
             { //loader para as fontes
                 test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
@@ -118,39 +106,35 @@ const webpackConfig = {
                 ]
             },
 
-           /*{
-                test: /\.(html)$/,
-                use: [
-                  {
-                    loader: "file-loader",
-                    options: {
-                      name: "[name].[ext]"
-                    }
-                  },
-                  { loader: "extract-loader" },
-                  {
-                    loader: "html-loader",
-                    options: {
-                        interpolate:true,
-                        attrs: ["img:src"]
-                    }
-                      
-                  }
-                ]
-            }*/
             {// loader para o pré processador html handlebars
                 test:/\.hbs$/,
                 use:[
                     { 
                         loader: "handlebars-loader",
+                        
                         options: {
                             partialDirs: [
                                 path.resolve(__dirname, "../src/hbs/partials"),
-                            ]
-                        },
+                            ],
+                            inlineRequires: '/images/'
+                        }                        
+                    }
+                ],
+                exclude: /node_modules/
+            },
+
+            { //loader para as imagens
+                test: /\.(jpg|gif|png)$/,
+                use:[
+                    {
+                        loader: "file-loader",
+                        options:{
+                            name:"images/[name]-[hash:8].[ext]"
+                        }
                     }
                 ]
-            }
+
+            },
         ]
     },
 

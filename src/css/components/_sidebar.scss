@@ -150,5 +150,30 @@
 }
 
 #account-sidebar{
-    z-index: 999999;
+    z-index: 9999999;
+
+    .sidenav-close{
+        padding: 0 15px;
+    }
+
+    .background{
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .user-view{
+        .circle {
+            border-radius: 50%;
+            height: 64px;
+            width: 64px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+
+.sidenav-overlay{
+   z-index: 999999; 
 }

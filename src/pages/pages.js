@@ -10,29 +10,44 @@ export default class Pages{
     }
 
     setClickLeftSidebar(){
-        $('.menu-btn').on('click', function(){
-            setTimeout(function(){
-                var resizeEvent = window.document.createEvent('UIEvents'); 
-                resizeEvent .initUIEvent('resize', true, false, window, 0); 
-                window.dispatchEvent(resizeEvent);
-            }, 300);
-            
+        var _this = this;
+        $('.menu-btn').on('click', function(){            
+            _this.checkMenuOpened();
+        })
+    }
+
+    checkMenuOpened(opts){
+        setTimeout(function(){
+            var resizeEvent = window.document.createEvent('UIEvents'); 
+            resizeEvent .initUIEvent('resize', true, false, window, 0); 
+            window.dispatchEvent(resizeEvent);
+        }, 300);
+
+        if(opts !== 'close'){
             if(!$('body').hasClass('sideLeftClosed')){
                 $('body').addClass('sideLeftClosed');
             }
             else{
                 $('body').removeClass('sideLeftClosed');
+                $('.sidenav-close').trigger('click');
             }
-        })
+        }
+        else{
+            $('body').addClass('sideLeftClosed');
+        }
     }
 
     setSidebars(){
+        var _this = this;
         var sidebarAcc = $('#account-sidebar');
 
         var instances = M.Sidenav.init(sidebarAcc, {
             menuWidth: 300,
             closeOnClick: true,
-            edge: 'right', // <--- CHECK THIS OUT
+            edge: 'right',
+            onOpenStart: function(){
+                _this.checkMenuOpened('close');
+            }
         }); //inicia sidebar
     }
 
