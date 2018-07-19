@@ -1,0 +1,403 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/materialize.css">
+        <link rel="stylesheet" href="../css/home.css">
+    </head>
+    <body class="home sideLeftClosed">
+        <div id="main-div">
+
+            <header class="header-wrapper">
+                <div class="header-content">
+                    <div class="row">
+                    
+                        <div class="col s9 m11 header-center">
+                            <div class="row">
+                                <div class="col logo-wrapper s12 m5">
+                                    <div class="logo"><i class="grafismo"> </i>BPag</div>
+                                </div>
+                                <div class="col m5 hide-on-small-only uoldiveo-wrapper">
+                                    <div class="logo-uoldiveo">
+                                        <i class="bpag-UOLIcon"></i>&nbsp;<i class="bpag-uoldiveo"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s3 m1 header-right">
+                            <a href="#"data-target="account-sidebar" class="account-btn sidenav-trigger" title="minha conta"><i class="material-icons">account_circle</i></a>
+                        </div>
+                    </div>
+                </div>
+            </header>  
+
+            <ul id="sidebar" id="slide-out" class="sidenav sidenav-fixed">
+                <li class="sideButtom">
+                    <a class="menu-btn" href="#!">
+                    <i class="far fa-window-minimize dash1"></i>
+                    <i class="far fa-window-minimize dash2"></i>
+                    <i class="far fa-window-minimize dash3"></i>
+                    </a>
+                </li>
+
+                
+                <li class="search">
+                    <a href="#" class="waves-effect waves-search">Busca
+                    <i class="material-icons">search</i>
+                    </a>
+                </li>
+                <li class="admin"><a href="#" class="waves-effect waves-admin">Administradores<i class="material-icons">supervisor_account</i></a></li>
+                <li class="report"><a href="#" class="waves-effect waves-report">Relatórios<i class="material-icons">content_paste</i></a></li>
+                <li class="config"><a href="#" class="waves-effect waves-config">Configurações<i class="material-icons">settings</i></a></li>
+                <li class="concil"><a href="#" class="waves-effect waves-concil">Conciliação<i class="material-icons">find_in_page</i></a></li>
+
+            </ul>
+            
+            <ul id="account-sidebar" id="slide-out" class="sidenav">
+                <li><a class="sidenav-close" href="#!"><i class="material-icons">close</i></a></li>
+                <li>
+                    <div class="user-view">
+                    <div class="background">
+                        <img src="../images/blue-accountbg.jpg">
+                    </div>
+                
+                    <a href="#user">
+                        <img class="circle" src="../images/account.png">
+                    </a>
+                
+                    <a href="#name"><span class="white-text name">Nome do usuário</span></a>
+                    <a href="#email"><span class="white-text email">email@domínio.com.br</span></a>
+                    </div>
+                </li>
+                <li><a class="waves-effect" href="#!">First Link</a></li>
+                <li><a class="waves-effect" href="#!">Second Link</a></li>
+                <li><div class="divider"></div></li>
+                <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+            </ul>
+                    
+                  
+            <section class="container main-content">
+                    <div class="wrapper resume-repports-wrapper">
+                        <div class="view-report card">
+                            <div class="row">
+                                <div class="col s12 m4">
+                                    <div class="stores">
+                                        <div class="input-field">
+                                            <select id="stores" class="select">
+                                                <option value="Todas">Todas</option>
+                                                <option value="Loja 1">Loja 1</option>
+                                            </select>
+                                            <label for="stores"><i class="material-icons">store</i> <span>Loja</span></label>
+                                        </div>
+                                    </div>
+                                    <div class="report-type">
+                                        <div class="input-field">
+                                            <select id="reports" class="select">
+                                                <option value="Transações">Transações</option>
+                                                <option value="Relatório 1">Relatório 1</option>
+                                            </select>
+                                            <label for="reports"><i class="material-icons">assignment</i> <span>Tipo de relatório</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m8 home-cards">
+                                    <div class="row">
+                                        
+                                        <div class=" col offset-s0 offset-l2 s12 l3 last24Hours">
+                                            <h3><span>Últimas 24 horas</span></h3>
+                                            <div class="card">
+                                                
+                                                <div class="card-content">
+                                                    <span class="card-title">
+                                                        29/05/2018
+                                                    </span>
+                                                    <div class="card-body">
+                                                        <p class="centered positive">15%</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col s12 l3 lastWeek">
+                                            <h3><span>Últimos 7 dias</span></h3>
+                                            <div class="card">
+                                                <div class="card-content">
+                                                    <span class="card-title">
+                                                        de 22/05/2018 até 29/05/2018
+                                                    </span>
+                                                    <div class="card-body">
+                                                        <p class="centered negative">3%</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col s12 l3 lastMonth">
+                                            <h3><span>Últimos 30 dias</span></h3>
+                                            <div class="card">
+                                                <div class="card-content">
+                                                    <span class="card-title">
+                                                        de 28/04/2018 até 29/05/2018
+                                                    </span>
+                                                    <div class="card-body">
+                                                        <p class="centered positive">13%</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="wrapper transactions-wrapper">
+                        <div class="view-transactions">
+                            <div class="row">
+                                <div class="col s12 m6 l2">
+                                    <div class="stores">
+                                        <div class="input-field">
+                                            <select id="transactions" class="select">
+                                                <option value="Todas">Todas</option>
+                                                <option value="Loja 1">Loja 1</option>
+                                            </select>
+                                            <label for="transactions"><i class="material-icons">compare_arrows</i> <span>Transações</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div class="col s12 m6 l2 transaction default">
+                                    <div class="card">
+                                        <div class="card-content">
+                                            <div class="card-header">
+                                                <h3>Total</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                455
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div class="col s12 m6 l2 transaction success">
+                                    <div class="card">
+                                        <div class="card-content">
+                                            <div class="card-header">
+                                                <h3>Aprovadas</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                400
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div class="col s12 m6 l2 transaction error">
+                                    <div class="card">
+                                        <div class="card-content">
+                                            <div class="card-header">
+                                                <h3>Recusadas</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                5
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div class="col s12 m6 l2 transaction deactive">
+                                    <div class="card">
+                                        <div class="card-content">
+                                            <div class="card-header">
+                                                <h3>Boletos</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                30
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div class="col s12 m6 l2 transaction alert">
+                                    <div class="card">
+                                        <div class="card-content">
+                                            <div class="card-header">
+                                                <h3>Estornos</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                20
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="wrapper totals-wrapper">
+                        <div class="view-totals">
+                            <div class="row">
+                                <div class="col s12 l6 account-resume">
+                                    <div class="card">
+                                        <div class="card-content">
+                                            <h3><i class="material-icons">account_balance</i><span>Resumo da conta</span></h3>
+                        
+                                            <div class="row">
+                                                <div class="col s12 m6 average-ticket sub-card">
+                                                    <div class="row">
+                                                        <div class="col s12 m3 subcard-icon">
+                                                            <i class="material-icons">shopping_cart</i>
+                                                        </div>
+                        
+                                                        <div class="col s12 m9 subcard-content">
+                                                            <div class="subcard-header">
+                                                                Ticket Médio
+                                                            </div>
+                                                            <div class="subcard-body">
+                                                                R$ 685,00
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col s12 m6 volume sub-card">
+                                                    <div class="row">
+                                                        <div class="col s12 m3 subcard-icon">
+                                                            <i class="material-icons">attach_money</i>
+                                                        </div>
+                                                        
+                                                        <div class="col s12 m9 subcard-content">
+                                                            <div class="subcard-header">
+                                                                Volume
+                                                            </div>
+                                                            <div class="subcard-body">
+                                                                    R$ 42.125,00
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div class="col s12 l6 pay-methods">
+                                    <div class="card">
+                                        <div class="card-content">
+                                            <h3><i class="material-icons">compare_arrows</i><span>Meios de pagamento</span></h3>
+                        
+                                                <div class="row">
+                        
+                                                <div class="col s12 m3 credit sub-card">
+                                                    <div class="row">
+                                                        <div class="col s12 subcard-content">
+                                                            <div class="subcard-header">
+                                                                Credito
+                                                            </div>
+                                                            <div class="subcard-body">
+                                                                48%
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                        
+                                                <div class="col s12 m3 debit sub-card">
+                                                    <div class="row">
+                                                        <div class="col s12 subcard-content">
+                                                            <div class="subcard-header">
+                                                                Debito
+                                                            </div>
+                                                            <div class="subcard-body">
+                                                                32%
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                        
+                                                <div class="col s12 m3 ticket sub-card">
+                                                    <div class="row">
+                                                        <div class="col s12 subcard-content">
+                                                            <div class="subcard-header">
+                                                                Boleto
+                                                            </div>
+                                                            <div class="subcard-body">
+                                                                18%
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                        
+                                                <div class="col s12 m3 gift sub-card">
+                                                    <div class="row">
+                                                        <div class="col s12 subcard-content">
+                                                            <div class="subcard-header">
+                                                                Gift Card
+                                                            </div>
+                                                            <div class="subcard-body">
+                                                                2%
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                        
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                    
+                    <div class="wrapper graphics-wrapper">
+                        <div class="view-graphics">
+                            <div class="row">
+                                <div class="col s12 l6 transactions-volume">
+                                    <div class="card">
+                                        <div class="card-content">
+                                            <h3><i class="material-icons">timeline</i><span>Volume de Transações</span></h3>
+                        
+                                            <div class="row">
+                                                <div id="chart1" class="col s12 graphic-area">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div class="col s12 l6 transactions-by-brand">
+                                    <div class="card">
+                                        <div class="card-content">
+                                            <h3><i class="material-icons">payment</i><span>Transações por bandeira</span></h3>
+                        
+                                                <div class="row">
+                        
+                                                <div id="chart2" class="col s12 graphic-area">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+            </section>
+
+            <footer class="footer-wrapper">
+                <div class="row">
+                    <div class="col s12 m6 uoldiveo-wrapper">
+                        <div class="logo-uoldiveo">
+                            <i class="bpag-UOLIcon"></i>&nbsp;<i class="bpag-uoldiveo"></i>
+                        </div>
+                    </div>
+            
+                        <div class="col s12 m6 copyright-wrapper">
+                        <p>Sistema de gestão de pagamentos v2.0</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+    </body>
+    <script src="../js/materialize-bundle.js"></script>
+    <script src="../js/vendors-home.js"></script>
+    <script src="../js/home-bundle.js"></script>
+</html>
